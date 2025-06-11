@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // ✅ Mais moderno, ideal para Node.js 16+
+    "module": "commonjs", // ✅ Mantém compatível com Node.js e Express
+    "moduleResolution": "node", // ✅ Necessário para importar tipos corretamente
+    "esModuleInterop": true, // ✅ Permite importações como 'import express from "express"'
+    "strict": true, // ✅ Garante checagens fortes de tipo
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
