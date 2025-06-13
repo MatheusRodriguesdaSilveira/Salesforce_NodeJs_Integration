@@ -8,8 +8,8 @@ class GetContactsController {
       const contacts = await getContacts.execute();
       return res.send(contacts);
     } catch (err) {
-      console.error("Erro:", err);
-      res.status(500).send("Erro ao conectar no Salesforce");
+      console.error("Error:", err);
+      res.status(500).send("Error retrieving contacts");
     }
   }
 }
