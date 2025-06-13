@@ -3,7 +3,7 @@ import { UpdateContactService } from "../service/update-contact.service";
 import { contactUpdateSchema, params } from "../config/schema";
 
 class UpdateContactController {
-  handle = async (req: FastifyRequest, res: FastifyReply) => {
+  async handle(req: FastifyRequest, res: FastifyReply) {
     try {
       const bodySchema = params;
       const { id } = bodySchema.parse(req.params);
@@ -19,7 +19,7 @@ class UpdateContactController {
         error: error instanceof Error ? error.message : "Invalid data",
       });
     }
-  };
+  }
 }
 
 export { UpdateContactController };
